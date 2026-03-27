@@ -1,13 +1,5 @@
 # lastfmpy - Last.FM API wrapper written in Python
 
-[![widget](https://inv.wtf/widget/myerfire)](https://myer.wtf/discord)
-
-Maintained by [Myer (also known as myerfire, MyerFire)](https://github.com/myerfire)
-
-- [YouTube](https://myer.wtf/youtube)
-- [Twitter](https://myer.wtf/twitter)
-- myer#0001 on Discord
-
 This library is an async wrapper for the [last.fm API](https://last.fm/api).
 
 ## Features
@@ -48,6 +40,6 @@ if __name__ == "__main__":
     asyncio.get_event_loop().run_until_complete(main())
 ```
 
-## Myer, this attribute is None when I think it shouldn't be!
+## This attribute is None when I think it shouldn't be!
 For certain API methods, Last.FM does not respond with every piece of information about the specific object that was requested. For example, `tags` is missing from an `Artist` object in the response from `artist.get_similar` because the tags do not exist in the API response itself. The `tags` attribute would be populated if the object was obtained using `artist.get_info`.
 The best way to check if this is happening to you is going to [the Last.FM API documentation](https://last.fm/api) and either looking at the example responses or testing by going to the API url itself.
