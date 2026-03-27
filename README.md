@@ -16,10 +16,10 @@ This library is an async wrapper for the [last.fm API](https://last.fm/api).
 
 - There are relevant docstrings on the functions of the main wrapper class.
 - Object attribute documentation may (?) be worked on but the code
-  in [objects.py](https://github.com/MyerFire/lastfmpy/blob/master/lastfmpy/objects.py) is easily readable.
+in [objects.py](https://github.com/myerDOT/lastfmpy/blob/master/lastfmpy/objects.py) is easily readable.
 - There is no API method for a user's currently playing song. The way to get the currently playing song of a user is
-  to request recent tracks and check whether the first index of the list has the attribute `playing` set to true.
-    - **UPDATE** - There is now a utility function in the `User` object of the `Client` that does this for you: `get_now_playing(user)`
+to request recent tracks and check whether the first index of the list has the attribute `playing` set to true.
+  - **UPDATE** - There is now a utility function in the `User` object of the `Client` that does this for you: `get_now_playing(user)`
 
 ## Quick Start
 
@@ -27,9 +27,8 @@ This library is an async wrapper for the [last.fm API](https://last.fm/api).
 from lastfmpy import LastFM
 import asyncio
 
-API_KEY = "hahagetbaited"
-# if it isn't obvious enough, replace this string 
-# with your API key obtained by going to https://last.fm/api/applications and creating an application
+API_KEY = "XXXXXXXXXX"
+# API key obtained by going to https://last.fm/api/applications and creating an application
 
 async def main():
     lastfm = await LastFM(API_KEY)
